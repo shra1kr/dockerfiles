@@ -1,3 +1,4 @@
 FROM almalinux:9
-USER dnf install nginx -y
+RUN adduser expense
+USER expense
 CMD [ "nginx","-g","daemon off;" ]
